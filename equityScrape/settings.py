@@ -29,6 +29,7 @@ ALLOWED_HOSTS = ['abhaya.pythonanywhere.com','redis-16249.c267.us-east-1-4.ec2.c
 
 REDIS_HOST = "redis-16249.c267.us-east-1-4.ec2.cloud.redislabs.com"
 REDIS_PORT = 16249
+REDIS_PASSWORD='lh9EzEtpVfsD4Dy9nAFkzeMkaghG09AS'
 CORS_ORIGIN_ALLOW_ALL = True
 CORS_ORIGIN_WHITELIST = [
     "http://localhost:8080",
