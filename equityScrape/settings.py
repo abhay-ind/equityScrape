@@ -25,7 +25,7 @@ SECRET_KEY = "54e80q%t=a#(^&ni2qz%2$fg#_$vt!c3c(!5so=rc_mtv#m-!g"
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['abhaya.pythonanywhere.com']
 
 REDIS_HOST = "localhost"
 REDIS_PORT = 6379
