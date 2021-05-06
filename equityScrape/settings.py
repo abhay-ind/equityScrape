@@ -25,7 +25,7 @@ SECRET_KEY = "54e80q%t=a#(^&ni2qz%2$fg#_$vt!c3c(!5so=rc_mtv#m-!g"
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['abhaya.pythonanywhere.com','redis-16249.c267.us-east-1-4.ec2.cloud.redislabs.com']
+ALLOWED_HOSTS = ['abhaya.pythonanywhere.com','redis-16249.c267.us-east-1-4.ec2.cloud.redislabs.com','localhost']
 
 REDIS_HOST = "redis-16249.c267.us-east-1-4.ec2.cloud.redislabs.com"
 REDIS_PORT = 16249
@@ -34,6 +34,7 @@ CORS_ORIGIN_ALLOW_ALL = True
 CORS_ORIGIN_WHITELIST = [
     "http://localhost:8080",
     "http://localhost:3000",
+    'https://redis-16249.c267.us-east-1-4.ec2.cloud.redislabs.com:16249',
     "https://abhaya.pythonanywhere.com",
     "https://qshareprice.web.app"
 ]
