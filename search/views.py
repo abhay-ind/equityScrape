@@ -16,6 +16,7 @@ class searchApi(APIView):
     def get(self, request):
         searchtext = request.GET.get("search")
         listOfNames = SearchConfig.redis_instance.keys(searchtext.upper() + "*")
+        print(SearchConfig.redis_instance.db)
         dictResult = list()
         for idx, i in enumerate(listOfNames):
             values = SearchConfig.redis_instance.get(listOfNames[idx])
@@ -39,7 +40,7 @@ class downloadWhole(APIView):
         response["Content-Disposition"] = 'attachment; filename="wholedownload.csv"'
 
         listOfName = SearchConfig.redis_instance.keys("*")
-        # print(sorted(listOfName))
+        print(sorted(listOfName))
         writer = csv.writer(response)
         writer.writerow(["NAME", "CODE", "OPEN", "HIGH", "LOW", "CLOSE"])
         for idx, i in enumerate(listOfName):
