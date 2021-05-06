@@ -2,6 +2,7 @@ from urllib.request import Request, urlopen
 from bs4 import BeautifulSoup
 from zipfile import ZipFile
 from io import StringIO,BytesIO
+import os
 import pandas as pd
 from redislite import Redis
 req = Request('https://www.bseindia.com/markets/MarketInfo/BhavCopy.aspx', headers={'User-Agent': 'Mozilla/5.0'})
@@ -14,7 +15,7 @@ myzip = ZipFile(BytesIO(data.read()))
 file=myzip.extract(myzip.namelist()[0])
 df=pd.read_csv(file)
 # print(df)
-redis_instance = Redis('/tmp/redis.db')
+redis_instance = Redis(os.path.join('/home/abhaya/redis.db'))
 
 # redis_instas                       port=6379, db=0)
 filteredDF=df[["SC_CODE","SC_NAME","OPEN","HIGH","LOW","CLOSE"]]
