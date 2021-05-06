@@ -1,2 +1,7 @@
+django
+djangorestframework
+django-cors-headers
+redislite
 redis
-
+bs4
+pandas
